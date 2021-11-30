@@ -1,0 +1,1386 @@
+[hidden] {
+    display: none;
+    visibility: hidden;
+}
+
+[data-theme=dark] {
+    scrollbar-color: transparent #888 !important;
+}
+
+[data-theme=dark] ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+[data-theme=dark] .message-area-dialog form {
+    /* background-color: #111; */
+    border: 1px solid #343434;
+    box-shadow: 0 0.5em 2em 0.25em rgba(128, 128, 128, 0.25);
+}
+
+
+[data-theme=dark] .message-area-dialog form button:active {
+    /* background-color: #272727; */
+    color: #fafafa;
+}
+
+[data-theme=dark] .message-area-dialog form i::after {
+    color: #111;
+}
+
+body {
+    scrollbar-color: transparent #555 !important;
+    scrollbar-width: thin !important;
+    scroll-behavior: smooth;
+}
+
+/* body ::-webkit-scrollbar {
+    width: 0.3333333333em;
+} */
+
+body ::-webkit-scrollbar-track {
+    background: transparent;
+    opacity: 0.5;
+}
+
+body ::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+body ::-webkit-scrollbar-thumb:hover {
+    background: #111;
+}
+
+body ::-webkit-scrollbar-corner {
+    display: none;
+}
+
+body ::-webkit-resizer {
+    color: currentColor;
+    height: 0.5em;
+    width: 100%;
+}
+
+.form {
+    text-align: left;
+    color: currentColor;
+}
+
+.form,
+.form .legend,
+.form .fieldset,
+.form label {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.form .legend {
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+.form .fieldset {
+    margin-top: 0.6666666667em;
+}
+
+.form .fieldset:last-of-type {
+    margin-bottom: 0.6666666667em;
+}
+
+.form .fieldset label {
+    outline: none;
+}
+
+.form .fieldset label:first-letter {
+    text-transform: uppercase;
+}
+
+.form .fieldset input:not([type=checkbox])+label,
+.form .fieldset input:not([type=radio])+label,
+.form .fieldset textarea+label,
+.form .fieldset select+label {
+    position: absolute;
+    padding: 1em 0.6666666667em;
+    width: calc(100% - 1.25em);
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    z-index: 2;
+    transition: opacity 0.1s linear, padding 0.2s ease-in, font 0.2s ease-in;
+}
+
+.form .fieldset input,
+.form .fieldset textarea,
+.form .fieldset select {
+    display: block;
+    /* width: calc(100% - 1.25em); */
+    padding: 1.5em 0.6666666667em 0.5em 0.6666666667em;
+    margin: 0 0 1px 0;
+    font: inherit;
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: currentColor;
+    background-color: rgba(127, 127, 127, 0.2);
+    border: 0;
+    border-radius: 0.25em;
+    cursor: default;
+    z-index: 1;
+    outline-color: currentColor;
+}
+
+.form .fieldset input::-moz-placeholder,
+.form .fieldset textarea::-moz-placeholder,
+.form .fieldset select::-moz-placeholder {
+    opacity: 0;
+    text-indent: 3em;
+    -moz-transition: opacity 0.1s linear, text-indent 0.2s ease-in;
+    transition: opacity 0.1s linear, text-indent 0.2s ease-in;
+}
+
+.form .fieldset input:-ms-input-placeholder,
+.form .fieldset textarea:-ms-input-placeholder,
+.form .fieldset select:-ms-input-placeholder {
+    opacity: 0;
+    text-indent: 3em;
+    -ms-transition: opacity 0.1s linear, text-indent 0.2s ease-in;
+    transition: opacity 0.1s linear, text-indent 0.2s ease-in;
+}
+
+.form .fieldset input::placeholder,
+.form .fieldset textarea::placeholder,
+.form .fieldset select::placeholder {
+    opacity: 0;
+    text-indent: 3em;
+    transition: opacity 0.1s linear, text-indent 0.2s ease-in;
+}
+
+.form .fieldset input:focus,
+.form .fieldset input:active,
+.form .fieldset input.active,
+.form .fieldset textarea:focus,
+.form .fieldset textarea:active,
+.form .fieldset textarea.active,
+.form .fieldset select:focus,
+.form .fieldset select:active,
+.form .fieldset select.active {
+    cursor: text;
+}
+
+.form .fieldset input:focus::-moz-placeholder,
+.form .fieldset input:active::-moz-placeholder,
+.form .fieldset input.active::-moz-placeholder,
+.form .fieldset textarea:focus::-moz-placeholder,
+.form .fieldset textarea:active::-moz-placeholder,
+.form .fieldset textarea.active::-moz-placeholder,
+.form .fieldset select:focus::-moz-placeholder,
+.form .fieldset select:active::-moz-placeholder,
+.form .fieldset select.active::-moz-placeholder {
+    opacity: 0.5;
+    text-indent: 0;
+}
+
+.form .fieldset input:focus:-ms-input-placeholder,
+.form .fieldset input:active:-ms-input-placeholder,
+.form .fieldset input.active:-ms-input-placeholder,
+.form .fieldset textarea:focus:-ms-input-placeholder,
+.form .fieldset textarea:active:-ms-input-placeholder,
+.form .fieldset textarea.active:-ms-input-placeholder,
+.form .fieldset select:focus:-ms-input-placeholder,
+.form .fieldset select:active:-ms-input-placeholder,
+.form .fieldset select.active:-ms-input-placeholder {
+    opacity: 0.5;
+    text-indent: 0;
+}
+
+.form .fieldset input:focus::placeholder,
+.form .fieldset input:active::placeholder,
+.form .fieldset input.active::placeholder,
+.form .fieldset textarea:focus::placeholder,
+.form .fieldset textarea:active::placeholder,
+.form .fieldset textarea.active::placeholder,
+.form .fieldset select:focus::placeholder,
+.form .fieldset select:active::placeholder,
+.form .fieldset select.active::placeholder {
+    opacity: 0.5;
+    text-indent: 0;
+}
+
+.form .fieldset input:focus+label,
+.form .fieldset input:active+label,
+.form .fieldset input.active+label,
+.form .fieldset textarea:focus+label,
+.form .fieldset textarea:active+label,
+.form .fieldset textarea.active+label,
+.form .fieldset select:focus+label,
+.form .fieldset select:active+label,
+.form .fieldset select.active+label {
+    background-color: inherit;
+    padding: 0.4em 0.8em;
+    font-size: 0.75em;
+    opacity: 1;
+}
+
+.form .fieldset input:focus+label::after,
+.form .fieldset input:active+label::after,
+.form .fieldset input.active+label::after,
+.form .fieldset textarea:focus+label::after,
+.form .fieldset textarea:active+label::after,
+.form .fieldset textarea.active+label::after,
+.form .fieldset select:focus+label::after,
+.form .fieldset select:active+label::after,
+.form .fieldset select.active+label::after {
+    content: ":";
+}
+
+.form .fieldset input:valid+label,
+.form .fieldset textarea:valid+label,
+.form .fieldset select:valid+label {
+    background-color: inherit;
+    padding: 0.4em 0.8em;
+    font-size: 0.75em;
+}
+
+.form .fieldset input:valid+label::after,
+.form .fieldset textarea:valid+label::after,
+.form .fieldset select:valid+label::after {
+    content: ":";
+}
+
+.form .fieldset input:not(:-moz-placeholder-shown)+label,
+.form .fieldset textarea:not(:-moz-placeholder-shown)+label,
+.form .fieldset select:not(:-moz-placeholder-shown)+label {
+    background-color: inherit;
+    padding: 0.4em 0.8em;
+    font-size: 0.75em;
+}
+
+.form .fieldset input:not(:-ms-input-placeholder)+label,
+.form .fieldset textarea:not(:-ms-input-placeholder)+label,
+.form .fieldset select:not(:-ms-input-placeholder)+label {
+    background-color: inherit;
+    padding: 0.4em 0.8em;
+    font-size: 0.75em;
+}
+
+.form .fieldset input:not(:placeholder-shown)+label,
+.form .fieldset textarea:not(:placeholder-shown)+label,
+.form .fieldset select:not(:placeholder-shown)+label {
+    background-color: inherit;
+    padding: 0.4em 0.8em;
+    font-size: 0.75em;
+}
+
+.form .fieldset input:not(:-moz-placeholder-shown)+label::after,
+.form .fieldset textarea:not(:-moz-placeholder-shown)+label::after,
+.form .fieldset select:not(:-moz-placeholder-shown)+label::after {
+    content: ":";
+}
+
+.form .fieldset input:not(:-ms-input-placeholder)+label::after,
+.form .fieldset textarea:not(:-ms-input-placeholder)+label::after,
+.form .fieldset select:not(:-ms-input-placeholder)+label::after {
+    content: ":";
+}
+
+.form .fieldset input:not(:placeholder-shown)+label::after,
+.form .fieldset textarea:not(:placeholder-shown)+label::after,
+.form .fieldset select:not(:placeholder-shown)+label::after {
+    content: ":";
+}
+
+.form .fieldset input:not(:-ms-input-placeholder)+label,
+.form .fieldset textarea:not(:-ms-input-placeholder)+label,
+.form .fieldset select:not(:-ms-input-placeholder)+label {
+    background-color: inherit;
+    padding: 0.4em 0.8em;
+    font-size: 0.75em;
+}
+
+.form .fieldset input:not(:-ms-input-placeholder)+label::after,
+.form .fieldset textarea:not(:-ms-input-placeholder)+label::after,
+.form .fieldset select:not(:-ms-input-placeholder)+label::after {
+    content: ":";
+}
+
+.form .fieldset input:not(:-moz-placeholder)+label,
+.form .fieldset textarea:not(:-moz-placeholder)+label,
+.form .fieldset select:not(:-moz-placeholder)+label {
+    background-color: inherit;
+    padding: 0.4em 0.8em;
+    font-size: 0.75em;
+}
+
+.form .fieldset input:not(:-moz-placeholder)+label::after,
+.form .fieldset textarea:not(:-moz-placeholder)+label::after,
+.form .fieldset select:not(:-moz-placeholder)+label::after {
+    content: ":";
+}
+
+.form .fieldset input,
+.form .fieldset select {
+    width: calc(100% - 3.5em);
+    padding-right: 3em;
+}
+
+.form .fieldset textarea {
+    border-top: 1.5em solid transparent;
+    padding-top: 0;
+    min-height: 6em;
+    height: 6em;
+    resize: vertical;
+    overflow-y: auto;
+}
+
+.form .verify {
+    display: none;
+}
+
+.form .checkbox {
+    position: relative;
+}
+
+.form .checkbox input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    top: calc(50% - 0.75em);
+    left: 0;
+    height: 1.5em;
+    width: 1.5em;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    z-index: 0;
+}
+
+.form .checkbox input[type=checkbox]+label {
+    width: inherit;
+    position: inherit;
+    padding: inherit;
+    font-size: inherit;
+}
+
+.form .checkbox input[type=checkbox]+label::after {
+    content: unset;
+}
+
+.form .checkbox input[type=checkbox]:focus+label::before,
+.form .checkbox input[type=checkbox]:active+label::before {
+    outline: 1px currentColor !important;
+}
+
+.form .checkbox input[type=checkbox]:checked+label::after {
+    content: "";
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+}
+
+.form .checkbox label {
+    position: relative;
+    width: calc(100% - 2.5em) !important;
+    line-height: 1.5;
+    padding-left: 2.5em !important;
+    z-index: 2;
+}
+
+.form .checkbox label::before,
+.form .checkbox label::after {
+    content: "" !important;
+    position: absolute;
+    transform-origin: center center;
+    opacity: 1;
+    z-index: 3;
+}
+
+.form .checkbox label::before {
+    top: calc(50% - 0.75em);
+    left: 0;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 0.25em;
+    background-color: rgba(127, 127, 127, 0.25);
+}
+
+.form .checkbox label::after {
+    top: calc(50% - 0.625em);
+    left: 0.5em;
+    height: 0.75em;
+    width: 0.3em;
+    transform: rotate(45deg) scale(0.5);
+    border: 0 solid currentColor;
+    border-width: 0 0.2em 0.2em 0;
+    opacity: 0;
+    transition: opacity 0.15s linear, transform 0.15s ease-in;
+}
+
+.form>button {
+    width: 100%;
+    padding: 1em 0.6666666667em;
+    float: none;
+    overflow: hidden;
+    font-weight: bolder;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    border: 0;
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+
+.form>button[type=submit] {
+    display: block;
+}
+
+.form>button[type=reset] {
+    display: none;
+}
+
+.form>button:not(:last-of-type) {
+    margin-bottom: 0.5em;
+}
+
+.message-area {
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    touch-action: none;
+}
+
+.message-area textarea {
+    min-height: 8em !important;
+    max-height: 50vh;
+    resize: vertical;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.message-area textarea:first-letter,
+.message-area textarea::first-letter {
+    text-transform: uppercase;
+}
+
+.message-area textarea::-moz-placeholder {
+    font: inherit;
+}
+
+.message-area textarea:-ms-input-placeholder {
+    font: inherit;
+}
+
+.message-area textarea::placeholder {
+    font: inherit;
+}
+
+.message-area-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    font-size: 0.75em;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s linear;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    z-index: 1900;
+    touch-action: none;
+}
+
+.message-area-dialog[open] {
+    display: inline-block;
+}
+
+.message-area-dialog.fade {
+    opacity: 1;
+    visibility: visible;
+}
+
+.message-area-dialog form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: calc(70% - 2em);
+    display: inline-block;
+    overflow: hidden;
+    padding: 1em 1em 0 1em;
+    margin: 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 0.25em;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    box-shadow: 0 0.5em 2em 0.25em rgba(128, 128, 128, 0.25);
+}
+
+.message-area-dialog form i {
+    position: relative;
+    font-style: normal;
+    display: block;
+    text-align: left;
+    text-indent: 2.5em;
+    line-height: 1.75;
+    word-break: break-word;
+    word-wrap: normal;
+    margin: 0.5em 0.5em 1.5em 0.5em;
+    padding: 0;
+}
+
+.message-area-dialog form i::before,
+.message-area-dialog form i::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1em;
+    height: 0.15em;
+    text-align: center;
+    transform: rotate(-45deg);
+    background-color: inherit;
+}
+
+.message-area-dialog form i::before {
+    width: 0;
+    height: 0;
+    border-left: 0.75em solid transparent;
+    border-right: 0.75em solid transparent;
+    border-top: 1.35em solid currentColor;
+    background: transparent;
+    transform: rotate(180deg);
+}
+
+.message-area-dialog form i::after {
+    content: "!";
+    left: -1.9em;
+    top: 0.05em;
+    transform: none;
+    font-weight: 900;
+    color: #FFF;
+    background: none;
+}
+
+.message-area-dialog form button {
+    background: none;
+    width: calc(50% + 1em);
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid transparent;
+    border-color: inherit;
+    padding: 0.5em 0;
+    margin: 0;
+    line-height: 2em;
+    outline: 0;
+    color: currentColor;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.message-area-dialog form button:hover,
+.message-area-dialog form button:focus {
+    background-color: #e6e6e6;
+}
+
+.message-area-dialog form button:active {
+    background-color: #b3b3b3;
+    color: #FFF;
+}
+
+.message-area-dialog form button:first-letter {
+    text-transform: uppercase;
+}
+
+.message-area-dialog form button[type=button] {
+    font-weight: 600;
+}
+
+.message-area-dialog form button:not(:first-of-type) {
+    border-left: 1px solid transparent;
+    border-color: inherit;
+}
+
+.message-area-dialog form button:first-of-type {
+    float: left;
+    margin-left: -1em;
+}
+
+.message-area-dialog form button:last-of-type {
+    float: right;
+    margin-right: -1em;
+}
+
+.message-area-dialog form button:only-of-type {
+    float: none;
+    width: calc(100% + 2em);
+}
+
+.message-area-listing {
+    position: relative;
+    font: inherit;
+    border: 0;
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    overflow: hidden;
+    touch-action: none;
+}
+
+.message-area-listing[data-state] {
+    cursor: default;
+}
+
+.message-area-listing[data-state] a {
+    pointer-events: none;
+    opacity: 0.15;
+    filter: blur(2px);
+}
+
+.message-area-listing[data-state=rename] .rename {
+    width: calc(100% - 3em) !important;
+    left: 3em;
+    right: auto;
+    text-indent: -200% !important;
+    padding: 0 4em 0 2em;
+    text-align: left;
+    opacity: 1;
+}
+
+.message-area-listing[data-state=rename] .rename i {
+    display: block;
+    cursor: text;
+}
+
+.message-area-listing[data-state=rename] button:not(.rename) svg path:first-child {
+    display: none;
+}
+
+.message-area-listing[data-state=rename] button:not(.rename) svg path:last-child {
+    display: block;
+}
+
+.message-area-listing[data-state=upload] .rename,
+.message-area-listing[data-state=send] .rename,
+.message-area-listing[data-state=sent] .rename {
+    display: none !important;
+}
+
+.message-area-listing[data-state=upload] .upload,
+.message-area-listing[data-state=send] .upload,
+.message-area-listing[data-state=sent] .upload {
+    opacity: 1;
+    right: 0;
+}
+
+.message-area-listing[data-state=upload] .delete svg path:first-child,
+.message-area-listing[data-state=send] .delete svg path:first-child,
+.message-area-listing[data-state=sent] .delete svg path:first-child {
+    display: none;
+}
+
+.message-area-listing[data-state=upload] .delete svg path:last-child,
+.message-area-listing[data-state=send] .delete svg path:last-child,
+.message-area-listing[data-state=sent] .delete svg path:last-child {
+    display: block;
+}
+
+.message-area-listing[data-state=upload] {
+    cursor: wait;
+}
+
+.message-area-listing[data-state=upload] .upload {
+    text-indent: -200% !important;
+    cursor: wait;
+}
+
+.message-area-listing[data-state=upload] .upload output {
+    display: block;
+}
+
+.message-area-listing[data-state=delete] .upload {
+    right: 2em;
+}
+
+.message-area-listing[data-state=delete] .rename {
+    right: 0;
+}
+
+.message-area-listing[data-state=delete] .delete {
+    opacity: 1;
+    text-indent: -2em !important;
+}
+
+.message-area-listing[data-state=delete] .delete svg {
+    right: auto;
+    left: 0.5em;
+}
+
+.message-area-listing[data-state=delete] button:not(.delete) svg path:first-child {
+    display: none;
+}
+
+.message-area-listing[data-state=delete] button:not(.delete) svg path:last-child {
+    display: block;
+}
+
+.message-area-listing a {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: calc(100% - 9.5em);
+    padding: 0.5em 0.5em 0.5em 3em;
+    color: currentColor;
+    line-height: 1.25;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    opacity: 0.5;
+    z-index: 1;
+    outline: 0;
+    transition: opacity 0.15s linear;
+}
+
+.message-area-listing a:hover,
+.message-area-listing a:focus {
+    opacity: 1;
+}
+
+.message-area-listing a svg,
+.message-area-listing a img {
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+}
+
+.message-area-listing a i {
+    display: block;
+    font-style: normal;
+    font-size: 0.75em;
+    line-height: 1;
+    opacity: 0.25;
+}
+
+.message-area-listing svg,
+.message-area-listing img {
+    margin: 0;
+    width: 2em;
+    height: 2em;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.message-area-listing svg {
+    fill: currentColor;
+}
+
+.message-area-listing figure {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% - 6em);
+    height: 3em;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    z-index: 0;
+}
+
+.message-area-listing button {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    visibility: visible;
+}
+
+.message-area-listing button:hover,
+.message-area-listing button[aria-expanded=true] {
+    background-color: rgba(127, 127, 127, 0.5);
+}
+
+.message-area-listing button[aria-expanded=true] {
+    width: 10em !important;
+    border-radius: 1em !important;
+    text-indent: 0 !important;
+    z-index: 2 !important;
+    overflow: hidden;
+    cursor: default;
+}
+
+.message-area-listing button.upload {
+    right: 2em;
+}
+
+.message-area-listing button.rename {
+    right: 4em;
+}
+
+.message-area-listing button svg path:last-child:not(:only-child) {
+    display: none;
+}
+
+.message-area-listing button i,
+.message-area-listing button output {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    white-space: nowrap;
+    outline: 0;
+}
+
+.message-area-listing button i {
+    overflow: hidden;
+    width: calc(100% - 6em);
+    text-overflow: ellipsis;
+    font-style: normal;
+    line-height: 2;
+    margin: 0 4em 0 0;
+    padding: 0 0 0 2em;
+    text-indent: 0 !important;
+    -webkit-touch-callout: all;
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    user-select: all;
+}
+
+.message-area-listing button output {
+    --progress: 0;
+    width: 100%;
+    text-indent: 0;
+    text-align: center;
+    line-height: 2.75;
+    font-size: 0.75em;
+    z-index: -1;
+}
+
+.message-area-listing button output::before {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+    width: calc(var(--progress) * 1%);
+    background-color: rgba(127, 127, 127, 0.75);
+    transition: width 0.15s ease-in;
+    z-index: -1;
+}
+
+
+.message-area button,
+.message-area-listing button {
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 3;
+}
+
+.message-area button:hover,
+.message-area button:focus,
+.message-area button:active,
+.message-area button:focus-within,
+.message-area-listing button:hover,
+.message-area-listing button:focus,
+.message-area-listing button:active,
+.message-area-listing button:focus-within {
+    opacity: 1 !important;
+}
+
+.message-area button::before,
+.message-area button::after,
+.message-area-listing button::before,
+.message-area-listing button::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: currentColor;
+    background: none;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    text-indent: 0;
+}
+
+.message-area button.back,
+.message-area button.rename,
+.message-area button.upload,
+.message-area button.delete,
+.message-area-listing button.back,
+.message-area-listing button.rename,
+.message-area-listing button.upload,
+.message-area-listing button.delete {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    color: inherit;
+    text-indent: -9999rem;
+    z-index: 4;
+    transition: opacity 0.15s linear, background 0.15s linear;
+    left: 80%;
+}
+
+
+.message-area button.back svg,
+.message-area button.rename svg,
+.message-area button.upload svg,
+.message-area button.delete svg,
+.message-area-listing button.back svg,
+.message-area-listing button.rename svg,
+.message-area-listing button.upload svg,
+.message-area-listing button.delete svg {
+    width: 40px;
+    height: 40px;
+}
+
+.message-area button.back svg,
+.message-area-listing button.back svg {
+    transform: rotate(-90deg);
+}
+
+.message-area button.ready svg path:first-child,
+.message-area button.recording svg path:first-child,
+.message-area-listing button.ready svg path:first-child,
+.message-area-listing button.recording svg path:first-child {
+    display: inline-block;
+}
+
+.message-area button.ready svg path:not(:first-child),
+.message-area button.recording svg path:not(:first-child),
+.message-area-listing button.ready svg path:not(:first-child),
+.message-area-listing button.recording svg path:not(:first-child) {
+    display: none;
+}
+
+.message-area button.recording,
+.message-area-listing button.recording {
+    --peak: 0;
+    background-color: red !important;
+    box-shadow: 0 0 0 calc(var(--peak) * 0.075em) rgba(255, 0, 0, calc(var(--peak) * 0.05));
+}
+
+.message-area button.recording::before,
+.message-area button.play::before,
+.message-area button.pause::before,
+.message-area-listing button.recording::before,
+.message-area-listing button.play::before,
+.message-area-listing button.pause::before {
+    content: attr(data-time);
+    top: -1.75em;
+}
+
+.message-area button.play svg path:first-child,
+.message-area button.pause svg path:first-child,
+.message-area-listing button.play svg path:first-child,
+.message-area-listing button.pause svg path:first-child {
+    display: none;
+}
+
+.message-area button.play svg path:nth-child(2),
+.message-area-listing button.play svg path:nth-child(2) {
+    display: inline-block;
+}
+
+.message-area button.play svg path:nth-child(3),
+.message-area-listing button.play svg path:nth-child(3) {
+    display: none !important;
+}
+
+.message-area button.pause svg path:nth-child(2),
+.message-area-listing button.pause svg path:nth-child(2) {
+    display: none !important;
+}
+
+.message-area button.pause svg path:nth-child(3),
+.message-area-listing button.pause svg path:nth-child(3) {
+    display: inline-block;
+}
+
+.message-area button svg,
+.message-area-listing button svg {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    fill: currentColor;
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+}
+
+.message-area button svg svg path:first-child,
+.message-area-listing button svg svg path:first-child {
+    display: inline-block;
+}
+
+.message-area button svg svg path:last-child,
+.message-area-listing button svg svg path:last-child {
+    display: none;
+}
+
+.message-area nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    overflow: hidden;
+    width: calc(100% - 1em);
+    height: calc(100% - 0.5em);
+    margin: 0;
+    padding: 0.5em 0.5em 0 0.5em;
+    text-align: center;
+    white-space: nowrap;
+    outline: none;
+    z-index: 3;
+}
+
+.message-area nav [type=file],
+.message-area nav audio {
+    display: none;
+    visibility: hidden;
+}
+
+.message-area nav>button {
+    top: calc(50% - 1em);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.message-area nav>button:nth-of-type(2n) {
+    margin: 0 10%;
+}
+
+.message-area nav>button:last-of-type {
+    margin: 0;
+}
+
+.message-area nav>button:nth-of-type(1) {
+    transform: scale(1) translateX(-100%);
+}
+
+.message-area nav>button:nth-of-type(3) {
+    transform: scale(1) translateX(100%);
+}
+
+.message-area nav~.close,
+.message-area nav~.back {
+    right: 0.25em;
+    top: 0.25em;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.message-area nav.select>button {
+    visibility: visible;
+    opacity: 0.5;
+    transform: scale(1) translateX(0);
+}
+
+.message-area nav.selected~.close,
+.message-area nav.selected~.back {
+    visibility: visible;
+    opacity: 0.5;
+}
+
+.message-area nav.selected>button {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.message-area nav.selected>button:nth-of-type(1) {
+    transform: scale(1) translateX(0);
+}
+
+.message-area nav.selected>button:nth-of-type(3) {
+    transform: scale(1) translateX(0);
+}
+
+.message-area nav.selected.type {
+    pointer-events: none;
+}
+
+.message-area nav.selected.type>button:not(:nth-of-type(1)) {
+    transform: scale(1) translateX(100%);
+}
+
+.message-area nav.selected.type~textarea::-moz-placeholder {
+    text-align: left;
+}
+
+.message-area nav.selected.type~textarea:-ms-input-placeholder {
+    text-align: left;
+}
+
+.message-area nav.selected.type~textarea::placeholder {
+    text-align: left;
+}
+
+.message-area nav.selected.speak>button:nth-of-type(1) {
+    transform: scale(1) translateX(-100%);
+}
+
+.message-area nav.selected.speak>button:nth-of-type(3) {
+    transform: scale(1) translateX(100%);
+}
+
+.message-area nav.selected.speak>button:nth-of-type(2) {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.25);
+    background-color: rgba(127, 127, 127, 0.5);
+}
+
+.message-area nav.selected.upload>button:not(:nth-of-type(3)) {
+    transform: scale(1) translateX(-100%);
+}
+
+.message-area nav.selected.upload>button:nth-of-type(3) {
+    margin-left: calc(-20% + 1em);
+    transform: scale(1.25) translateX(-100%);
+    visibility: visible;
+    opacity: 1;
+    background-color: rgba(127, 127, 127, 0.5);
+}
+
+.message-area nav.selected.playback .toolbar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.message-area nav.selected.playback .seekbar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.message-area nav .visualizer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
+}
+
+.message-area nav .toolbar {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    top: calc(50% - .65em);
+    bottom: 0;
+    width: calc(100% - 1em);
+}
+
+.message-area nav .toolbar button {
+    opacity: 0.5;
+    visibility: visible;
+    transform: scale(0.75) !important;
+    float: none;
+}
+
+.message-area nav .toolbar button::after {
+    font-size: 0.85em;
+}
+
+.message-area nav .toolbar button:first-child {
+    margin-right: 33%;
+}
+
+.message-area nav .toolbar button:last-child {
+    margin-left: 33%;
+}
+
+.message-area nav .seekbar {
+    --position: 0;
+    position: absolute;
+    bottom: 0.9em;
+    left: 0;
+    width: 100%;
+    height: 1em;
+    font-size: 0.6em;
+    transition: opacity 0.25s linear;
+}
+
+.message-area nav .seekbar:hover i::before {
+    opacity: 1;
+}
+
+.message-area nav .seekbar::before,
+.message-area nav .seekbar::after {
+    position: absolute;
+}
+
+.message-area nav .seekbar::before {
+    content: attr(data-start);
+    left: 0;
+}
+
+.message-area nav .seekbar::after {
+    content: attr(data-end);
+    right: 0;
+}
+
+.message-area nav .seekbar i {
+    width: calc(100% - 10em);
+    position: relative;
+    display: inline-block;
+    font-style: normal;
+    text-indent: -9999rem;
+    cursor: pointer;
+}
+
+.message-area nav .seekbar i::before,
+.message-area nav .seekbar i::after {
+    content: "";
+    top: 25%;
+    left: 0;
+    position: absolute;
+    display: block;
+    height: 50%;
+    width: 100%;
+    background-color: currentColor;
+    opacity: 0.15;
+}
+
+.message-area nav .seekbar i::before {
+    width: calc(100% * var(--position));
+    opacity: 0.7;
+    transition: width 5ms ease-in-out;
+}
+
+.message-area nav button {
+    float: none;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: transform 0.15s ease-in-out, opacity 0.15s linear, background 0.15s linear;
+}
+
+.message-area nav button:first-letter {
+    text-transform: uppercase;
+}
+
+.message-area nav button::before,
+.message-area nav button::after {
+    font-size: 0.5em;
+    transition: opacity 0.15s linear, background 0.15s linear;
+}
+
+.message-area nav button::before {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.message-area nav button::after {
+    top: 100%;
+    line-height: 2;
+    opacity: 0;
+}
+
+.message-area nav button:hover,
+.message-area nav button:focus,
+.message-area nav button:active {
+    transform: scale(1.25);
+    background-color: rgba(127, 127, 127, 0.5);
+}
+
+.message-area nav button:hover::after,
+.message-area nav button:focus::after,
+.message-area nav button:active::after {
+    opacity: 1;
+    transition: opacity 0.15s linear;
+}
+
+.message-area nav button:hover::after {
+    content: attr(aria-label);
+    opacity: 1;
+}
+
+.message-area nav button:focus::after {
+    content: attr(aria-label);
+}
+
+.message-area nav button:focus:not(:focus-visible)::after {
+    content: none;
+}
+
+.message-area nav button:focus:not(:-moz-focusring)::after {
+    content: none;
+}
+
+@media (min-width:0px) {
+
+    .modal-contents .message-area button.back,
+    .modal-contents .message-area button.rename,
+    .modal-contents .message-area button.upload,
+    .modal-contents .message-area button.delete,
+    .modal-contents .message-area-listing button.back,
+    .modal-contents .message-area-listing button.rename,
+    .modal-contents .message-area-listing button.upload,
+    .modal-contents .message-area-listing button.delete {
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        color: inherit;
+        text-indent: -9999rem;
+        z-index: 4;
+        transition: opacity 0.15s linear, background 0.15s linear;
+        left: 220px;
+    }
+
+
+    .modal-contents .message-area button.back svg,
+    .modal-contents .message-area button.rename svg,
+    .modal-contents .message-area button.upload svg,
+    .modal-contents .message-area button.delete svg,
+    .modal-contents .message-area-listing button.back svg,
+    .modal-contents .message-area-listing button.rename svg,
+    .modal-contents .message-area-listing button.upload svg,
+    .modal-contents .message-area-listing button.delete svg {
+        width: 1em;
+        height: 1em;
+
+    }
+}
+
+@media (max-width:350px) {
+
+    .message-area button.back,
+    .message-area button.rename,
+    .message-area button.upload,
+    .message-area button.delete,
+    .message-area-listing button.back,
+    .message-area-listing button.rename,
+    .message-area-listing button.upload,
+    .message-area-listing button.delete {
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        color: inherit;
+        text-indent: -9999rem;
+        z-index: 4;
+        transition: opacity 0.15s linear, background 0.15s linear;
+        left: 73%;
+    }
+}
