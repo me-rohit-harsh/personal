@@ -1020,7 +1020,7 @@
 
     p.p {
       letter-spacing: 2px;
-      font-size: 50%;
+      /* font-size: 50%; */
     }
   }
 
@@ -1039,7 +1039,7 @@
 
     p.p {
       letter-spacing: 2px;
-      font-size: 50%;
+      /* font-size: 50%; */
     }
   }
 
@@ -1058,7 +1058,7 @@
 
     p.p {
       letter-spacing: 0px;
-      font-size: 40%;
+      /* font-size: 40%; */
     }
   }
 
@@ -1090,7 +1090,7 @@
     letter-spacing: 2px;
     color: #4f3e6c;
     transition-duration: 0.8s;
-    opacity: 70%;
+    opacity: 0.8;
 
   }
 
