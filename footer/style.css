@@ -1,0 +1,60 @@
+   	a {
+
+   		text-decoration: none;
+
+   	}
+
+
+   	footer {
+
+   		text-align: center;
+
+   		/* padding-bottom: 15px; */
+
+   	}
+
+
+
+   	.sm-handle {
+
+   		display: flex;
+
+   		padding-top: 2.5rem;
+
+   		justify-content: center;
+
+   	}
+
+   	.sm-button {
+
+   		margin: 0px 10px 0px;
+
+   		border: 1px solid #bababa;
+
+   		border-radius: 100%;
+
+   		width: 2rem;
+
+   		height: 2rem;
+
+   		display: flex;
+
+   		align-items: center;
+
+   		justify-content: center;
+
+   		cursor: pointer;
+
+   	}
+
+   	.sm-button:hover {
+
+   		background: linear-gradient(to right, #6500ff, #a400ff);
+
+   	}
+
+   	.fab {
+
+   		color: #fff;
+
+   	}
