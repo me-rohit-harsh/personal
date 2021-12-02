@@ -30,7 +30,7 @@ var-service {
 
 .page-title p {
     text-transform: uppercase;
-    letter-spacing: 18px;
+    letter-spacing: 5px;
 }
 @media (max-width:315px) {
     .page-title h1,.contact-title {

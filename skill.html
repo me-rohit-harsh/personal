@@ -154,6 +154,10 @@
                         .skill-section {
                             font-size: 50px;
                         }
+
+                        .article {
+                            height: 100%;
+                        }
                     }
                 </style>
                 <ul class="share-icons" style="padding: 0;
@@ -319,7 +323,6 @@
         .container {
             width: 80%;
             margin-top: 15%;
-            margin-left: 5%;
         }
 
         @keyframes load {
@@ -404,6 +407,9 @@
             width: 50%;
             /* height: 100vh; */
             float: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
         }
 
@@ -411,20 +417,29 @@
             width: 50%;
             /* height: 100vh; */
             float: left;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* MEDIA QUERIES FOR 545px <= Resolutions */
 
         @media (max-width:545px) {
             .block-left {
-                display: block;
                 width: 100%;
+                flex-direction: column;
+                align-items: center;
+                display: flex;
             }
 
             .block-right {
-                display: block;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
+
         }
     </style>
     <div>
