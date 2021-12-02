@@ -708,7 +708,7 @@
   }
 
   a,
-  h2,
+  h3,
   .p {
     -youbkit-touch-callout: none;
     /* iOS Safari */
@@ -1011,7 +1011,7 @@
     }
 
     .head {
-      font-size: 400%;
+      font-size: 300%;
     }
 
     .part {
@@ -1030,7 +1030,7 @@
     }
 
     .head {
-      font-size: 2.6rem;
+      font-size: 2rem;
     }
 
     .part {
@@ -1049,7 +1049,7 @@
     }
 
     .head {
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
 
     .part {
@@ -1094,7 +1094,7 @@
 
   }
 
-  h2 {
+  h3 {
     margin-left: 10%;
     color: #4f3e6c;
     font-family: 'Montez', cursive;
@@ -1121,8 +1121,8 @@
     font-size: 50px;
     font-family: 'Lato',
       sans-serif;
-      font-weight: 600;
-      text-transform: uppercase;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 
   .ne {
@@ -1460,7 +1460,8 @@
     -webkit-text-stroke: 2px #42345a;
     color: transparent;
   }
-  h1{
+
+  h1 {
     color: #fff;
   }
 
