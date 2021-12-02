@@ -76,4 +76,8 @@
         font-size: 30px;
         padding-bottom: 1rem;
     }
+
+    .certificate-carousel .controls {
+        opacity: 0.8;
+    }
 }
