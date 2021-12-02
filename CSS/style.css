@@ -1460,6 +1460,9 @@
     -webkit-text-stroke: 2px #42345a;
     color: transparent;
   }
+  h1{
+    color: #fff;
+  }
 
   #portfoilo h1::selection {
     background-color: #42345a;

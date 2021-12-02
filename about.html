@@ -163,7 +163,7 @@
             list-style-type: none;">
           <li class="share-icons__item"><a
               href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fme-rohit-harsh.github.io%2Fpersonal%2Findex.html&amp;src=sdkpreparse "
-              target="_blank"><i class="fa fa-facebook gvhg" aria-hidden="true"></i></a>
+              target="_blank"><i class="fa fa-facebook-official gvhg" aria-hidden="true"></i></a>
           </li>
 
           <li class="share-icons__item"><a href="whatsapp://send?text=https://quitly.in/"
@@ -283,7 +283,7 @@
             list-style-type: none;">
           <li class="share-icons__item"><a
               href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fme-rohit-harsh.github.io%2Fpersonal%2Findex.html&amp;src=sdkpreparse "
-              target="_blank"><i class="fa fa-facebook gvhg" aria-hidden="true"></i></a>
+              target="_blank"><i class="fa fa-facebook-official gvhg" aria-hidden="true"></i></a>
           </li>
 
           <li class="share-icons__item"><a href="https://github.com/me-rohit-harsh"><i class="fab fa-whatsapp gvhg">
@@ -448,16 +448,16 @@
       <div class="article">
         <h1 class="part skill-section glowIn">My, Myself & I</h1>
 
-        <h3 style="margin: 5% 10%;" class="glowIn">I’m a full-stack web Developer located in India. I have a serious
+        <h3 style="margin: 5% 10%;" class="glowIn">I’m a full-stack Web Developer located in India. I have a serious
           passion
           for UI
           effects, animations and creating
           intuitive, dynamic user experiences.
         </h3>
-        <h3 style="margin: 5% 10%;" class="glowIn">Well-organised person, problem solver, independent employee with high
+        <h3 style="margin: 5% 10%;" class="glowIn">Well-organised person, problem solver, independent learner with high
           attention to
-          detail. Fan of MMA, outdoor
-          activities, TV series and English literature. A family person and father of two fractious boys,
+          detail. Fan of Cricket, outdoor
+          activities, Web series,TV series and English literature and also interested in learning new technologies .
         </h3>
         <h3 style="margin: 5% 10%;" class="glowIn">Interested in the entire frontend spectrum and working on ambitious
           projects with
@@ -574,29 +574,29 @@
       <div class="close">+</div>
 
       <body data-theme="dark">
-        <form lang="en" spellcheck="false" class="form">
+        <form lang="en" spellcheck="false" class="form" name="google-sheet" method="post">
           <legend class="legend">Leave a message</legend>
           <fieldset class="fieldset">
             <input type="text" id="msg-name" placeholder="Type your name" accesskey="n" minlength="2"
               autocomplete="name" required autofocus style="min-width: 100%;
-                  max-width: 100%;" />
+                  max-width: 100%;" name="Name" />
             <label for="msg-name">Name</label>
           </fieldset>
           <fieldset class="fieldset">
             <input type="email" id="msg-email" placeholder="name@domain.tld" accesskey="e" autocomplete="email" required
               style="min-width: 100%;
-                  max-width: 100%;" />
+                  max-width: 100%;" name="Email" />
             <label for="msg-email">E-Mail</label>
           </fieldset>
           <fieldset class="fieldset">
             <input type="tel" id="msg-phone" placeholder="+00 000 000 000" accesskey="t" autocomplete="tel" required
               style="min-width: 100%;
-                  max-width: 100%;" />
+                  max-width: 100%;" name="Phone" />
             <label for="msg-phone">Phone number</label>
           </fieldset>
           <fieldset class="fieldset message hjbdsfhg" spellcheck="true">
             <textarea id="msg-text" placeholder="Type a message" accesskey="m" minlength="24" required style="min-width: 100%;
-                  max-width: 100%;"></textarea>
+                  max-width: 100%;" name="Message"></textarea>
             <label for="msg-text">Message</label>
           </fieldset>
           <!-- <fieldset class="fieldset checkbox">
@@ -633,7 +633,21 @@
                         <label for="msg-verify">Verification question</label>
                     </div> -->
         </form>
+        <script>
+          const scriptURL =
+            'https://script.google.com/macros/s/AKfycby55oZ_XkHpzKX08l7k2qRgFGuov5JOtXu4RYE0_Hly7KsouCMD_tz4Oou2WM_1ozH7/exec'
+          const form = document.forms['google-sheet']
 
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+              })
+              .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+              .catch(error => console.error('Error!', error.message))
+          })
+        </script>
         <style>
           /* Dark mode*/
           body body[data-theme="dark"] {

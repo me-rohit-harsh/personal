@@ -16,8 +16,8 @@
   <link rel="stylesheet" href="project1/style.css">
   <link rel="stylesheet" href="hover/style.css">
   <link rel="stylesheet" href="scroll/scroll.css">
-  <link rel="stylesheet" href="popup/contact.css">
-  <link rel="stylesheet" href="popup/contact1.css">
+  <!-- <link rel="stylesheet" href="popup/contact.css">
+  <link rel="stylesheet" href="popup/contact1.css"> -->
   <link rel="stylesheet" href="Cards/cards.css">
   <link rel="stylesheet" href="contact/style.css">
   <link rel="stylesheet" href="CSS/style.css">
@@ -139,7 +139,7 @@
             list-style-type: none;">
             <li class="share-icons__item"><a
                 href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fme-rohit-harsh.github.io%2Fpersonal%2Findex.html&amp;src=sdkpreparse "
-                target="_blank"><i class=" fa fa-facebook gvhg" aria-hidden="true"></i></a>
+                target="_blank"><i class=" fa fa-facebook-official gvhg" aria-hidden="true"></i></a>
             </li>
 
             <li class="share-icons__item"><a
@@ -164,7 +164,7 @@
         <li style="z-index: 1;"><a href="about.html" style="font-family: 'Rubik', sans-serif;  font-size: 20px;"
             class="nav-items hover-target">About
         </li></a>
-        <li style="z-index: 1;"><a href="#" id="contact-click"
+        <li style="z-index: 1;"><a href="#Contact" id="contact-click"
             style="font-family: 'Rubik', sans-serif; font-size: 20px;" class="nav-items hover-target">Contact</li></a>
         <li style="z-index: 1;"><a href="skill.html" style="font-family: 'Rubik', sans-serif;  font-size: 20px;"
             class="nav-items hover-target">My Skills</li></a>
@@ -260,7 +260,7 @@
                         list-style-type: none;">
             <li class="share-icons__item"><a
                 href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fme-rohit-harsh.github.io%2Fpersonal%2Findex.html&amp;src=sdkpreparse "
-                target="_blank"><i class=" fa fa-facebook gvhg" aria-hidden="true"></i></a>
+                target="_blank"><i class=" fa fa-facebook-official gvhg" aria-hidden="true"></i></a>
             </li>
 
             <li class="share-icons__item"><a
@@ -2195,124 +2195,6 @@
     </div>
 
 
-    <!-- Contact pop up  -->
-
-
-    <div class="bg-modal" style="z-index: 11; position: fixed; overflow: scroll;">
-      <div class="modal-contents">
-
-        <div class="close">+</div>
-
-        <body data-theme="dark">
-          <form lang="en" spellcheck="false" class="form">
-            <legend class="legend">Leave a message</legend>
-            <fieldset class="fieldset">
-              <input type="text" id="msg-name" placeholder="Type your name" accesskey="n" minlength="2"
-                autocomplete="name" required autofocus style="min-width: 100%;
-              max-width: 100%;" />
-              <label for="msg-name">Name</label>
-            </fieldset>
-            <fieldset class="fieldset">
-              <input type="email" id="msg-email" placeholder="name@domain.tld" accesskey="e" autocomplete="email"
-                required style="min-width: 100%;
-              max-width: 100%;" />
-              <label for="msg-email">E-Mail</label>
-            </fieldset>
-            <fieldset class="fieldset">
-              <input type="tel" id="msg-phone" placeholder="+00 000 000 000" accesskey="t" autocomplete="tel" required
-                style="min-width: 100%;
-              max-width: 100%;" />
-              <label for="msg-phone">Phone number</label>
-            </fieldset>
-            <fieldset class="fieldset message hjbdsfhg" spellcheck="true" style="min-width: 100%;
-              max-width: 100%;">
-              <textarea id="msg-text" placeholder="Type a message" accesskey="m" minlength="24" required></textarea>
-              <label for="msg-text">Message</label>
-            </fieldset>
-            <!-- <fieldset class="fieldset checkbox">
-        <input type="checkbox" id="msg-cc" />
-        <label for="msg-cc">Send me a copy of this message.</label>
-      </fieldset> 
-      <button type="reset">Reset</button> -->
-            <button type="submit" class=" home-button send jdshf " tabindex="1"
-              style="transition-duration: 0.3s; padding: 10px 0; ">Send message</button>
-            <div class="social-contact">
-              <a style="text-decoration: none;" href="#" class="fa fa-instagram fa-3x icon-s"></a>
-              <a style="text-decoration: none;  " href="#" class="fa fa-linkedin fa-3x icon-s"></a>
-              <a style="text-decoration: none;  " href="#" class="fa fa-whatsapp fa-3x icon-s"></a>
-              <style>
-                .icon-s:hover {
-                  color: black;
-                  transition-duration: 0.3s;
-                }
-
-                .icon-s {
-                  color: #A44DD8;
-                  transition-duration: 0.3s;
-                }
-
-                .social-contact {
-                  column-gap: 10%;
-                  display: flex;
-                  flex-direction: row;
-                }
-              </style>
-            </div>
-            <!-- <div class="verify">
-              <input type="number" id="msg-verify" placeholder="2+7=" max="99" />
-              <label for="msg-verify">Verification question</label>
-            </div> -->
-          </form>
-
-          <style>
-            /* Dark mode*/
-            body body[data-theme="dark"] {
-              color: #5c5c5c;
-              background-color: #111;
-            }
-
-            /* Form layout */
-            .form {
-              width: 90% !important;
-              max-width: 584px;
-              display: inline-block;
-            }
-
-            .form>legend svg {
-              fill: currentColor;
-              width: 1.2em;
-              height: 1.2em;
-              vertical-align: text-top;
-            }
-
-            /* Theme switch */
-            #theme {
-              position: fixed;
-              left: 50%;
-              top: 2em;
-              transform: translateX(-50%);
-              -webkit-transform: translateX(-50%);
-            }
-
-            #theme label {
-              text-align: center;
-              padding: 0 0 3.5em 0;
-              text-indent: -1.5em
-            }
-          </style>
-          <script>
-            // Initialization
-            document.addEventListener('DOMContentLoaded', function (e) {
-              // Example for German i18n
-              var i18n = {};
-              messageArea('.message');
-            })
-          </script>
-
-          <script src="popup/contact.js"></script>
-        </body>
-      </div>
-    </div>
     <h1 class="contact-title" id="Contact" style="padding-bottom:5%; margin-top: 3%; text-align: center;">Get in touch
     </h1>
 
@@ -2367,15 +2249,15 @@
           <div class="col2 column2 last hbjb" id="chvyv">
             <div class="sec2contactform">
               <div class="wrapper-form">
-                <form action="#">
+                <form method="post" name="google-sheet">
                   <div class="dbl-field">
                     <div class="field">
-                      <input type="text" name="name" placeholder="Name">
+                      <input type="text" name="Name" placeholder="Name">
                       <i class='fas fa-user'></i>
                     </div>
                     <div class="field email">
 
-                      <input type="email" name="email" placeholder="Email" required>
+                      <input type="email" name="Email" placeholder="Email" required>
                       <i class='fas fa-envelope'></i>
                     </div>
                   </div>
@@ -2390,13 +2272,13 @@
                     </div> -->
                   </div>
                   <div class="message">
-                    <textarea placeholder="Write your message" type="text" name="message" minlength="24"
+                    <textarea placeholder="Write your message" type="text" name="Message" minlength="24"
                       required></textarea>
                     <i class="material-icons">message</i>
                   </div>
 
-                  <div class="clearfix "><button type="submit" class="home-button custom-btn btn-9" tabindex="1"> Send<i
-                        class="fas fa-paper-plane"></i></button></div>
+                  <div class="clearfix "><button type="submit" name="submit" class="home-button custom-btn btn-9"
+                      tabindex="1"> Send<i class="fas fa-paper-plane"></i></button></div>
                 </form>
               </div>
             </div>
@@ -2406,7 +2288,20 @@
 
       </div>
     </div>
+    <script>
+      const scriptURL ='https://script.google.com/macros/s/AKfycby55oZ_XkHpzKX08l7k2qRgFGuov5JOtXu4RYE0_Hly7KsouCMD_tz4Oou2WM_1ozH7/exec'
+      const form = document.forms['google-sheet']
 
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, {
+            method: 'POST',
+            body: new FormData(form)
+          })
+          .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
     <div class="bottom">
       <div class="inner">
         <footer>
