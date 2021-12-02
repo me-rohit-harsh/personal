@@ -8,10 +8,13 @@
   <title>Skills</title>
   <link rel="icon" href="favicon.ico">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="popup/contact.css">
+  <link rel="stylesheet" href="popup/contact1.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link rel="stylesheet" href="CSS/style.css">
   <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     .article {
       height: 100vh;
@@ -159,8 +162,8 @@
         </style>
         <ul class="share-icons" style="padding: 0;
             list-style-type: none;">
-          <li class="share-icons__item"><a href="https://codepen.io/me_rohit_harsh"><i
-                class="fab fa-codepen gvhg"></i></a>
+          <li class="share-icons__item"><a
+              href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fme-rohit-harsh.github.io%2Fpersonal%2Findex.html&amp;src=sdkpreparse "target="_blank"><i class="fa fa-facebook gvhg" aria-hidden="true"></i></a>
           </li>
 
           <li class="share-icons__item"><a href="whatsapp://send?text=https://quitly.in/"
@@ -183,8 +186,8 @@
       <li style="z-index: 1;"><a href="about.html" style="font-family: 'Rubik', sans-serif;  font-size: 20px;"
           class="nav-items hover-target"><strong>About</strong>
       </li></a>
-      <li style="z-index: 1;"><a href="index.html#Contact" id="contact-click"
-          style="font-family: 'Rubik', sans-serif; font-size: 20px;" class="nav-items hover-target">Contact
+      <li style="z-index: 1;"><a href="#" id="contact-click" style="font-family: 'Rubik', sans-serif; font-size: 20px;"
+          class="nav-items hover-target">Contact
       </li></a>
       <li style="z-index: 1;"><a href="skill.html" style="font-family: 'Rubik', sans-serif;  font-size: 20px;"
           class="nav-items hover-target">My Skills</li></a>
@@ -278,9 +281,10 @@
         </style>
         <ul class="share-icons" style="padding: 0;
             list-style-type: none;">
-          <li class="share-icons__item"><a href="https://codepen.io/me_rohit_harsh"><i
-                class="fab fa-codepen gvhg"></i></a>
-          </li>
+            <li class="share-icons__item"><a
+                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fme-rohit-harsh.github.io%2Fpersonal%2Findex.html&amp;src=sdkpreparse "target="_blank"><i
+                  class="fa fa-facebook gvhg" aria-hidden="true"></i></a>
+            </li>
 
           <li class="share-icons__item"><a href="https://github.com/me-rohit-harsh"><i class="fab fa-whatsapp gvhg">
               </i></a>
@@ -443,14 +447,9 @@
     <div class="block-left" style="letter-spacing: 1px;">
       <div class="article">
         <h1 class="part skill-section glowIn">My, Myself & I</h1>
-        <!-- <h3 style="margin:5% 10%; color: #111;"><span>Since beginning my journey as a freelance developer nearly 10
-                    years
-                    ago, I’ve done
-                    remote work for agencies, consulted for startups, and collaborated with talented people to create
-                    web products
-                    for both business and consumer use. </span> </h3> -->
 
-        <h3 style="margin: 5% 10%;" class="glowIn">I’m a full-stack web Developer located in India. I have a serious passion
+        <h3 style="margin: 5% 10%;" class="glowIn">I’m a full-stack web Developer located in India. I have a serious
+          passion
           for UI
           effects, animations and creating
           intuitive, dynamic user experiences.
@@ -475,10 +474,8 @@
 
     <div class="block-right">
       <div class="container">
-        <img src="rohit.png" alt="profile-img" style="  display: block;
-                  margin-left: auto;
-                  margin-right: auto;
-                  width: 50%;">
+        <img src="rohit.png" alt="profile-img"
+          style="  display: block; margin-left: auto; margin-right: auto; width: 50%;">
       </div>
     </div>
 
@@ -568,7 +565,124 @@
       });
     });
   </script>
+  <!-- Contact pop up  -->
 
+
+  <div class="bg-modal" style="z-index: 11; position: fixed; overflow: scroll;">
+    <div class="modal-contents">
+
+      <div class="close">+</div>
+
+      <body data-theme="dark">
+        <form lang="en" spellcheck="false" class="form">
+          <legend class="legend">Leave a message</legend>
+          <fieldset class="fieldset">
+            <input type="text" id="msg-name" placeholder="Type your name" accesskey="n" minlength="2"
+              autocomplete="name" required autofocus style="min-width: 100%;
+                  max-width: 100%;" />
+            <label for="msg-name">Name</label>
+          </fieldset>
+          <fieldset class="fieldset">
+            <input type="email" id="msg-email" placeholder="name@domain.tld" accesskey="e" autocomplete="email" required
+              style="min-width: 100%;
+                  max-width: 100%;" />
+            <label for="msg-email">E-Mail</label>
+          </fieldset>
+          <fieldset class="fieldset">
+            <input type="tel" id="msg-phone" placeholder="+00 000 000 000" accesskey="t" autocomplete="tel" required
+              style="min-width: 100%;
+                  max-width: 100%;" />
+            <label for="msg-phone">Phone number</label>
+          </fieldset>
+          <fieldset class="fieldset message hjbdsfhg" spellcheck="true">
+            <textarea id="msg-text" placeholder="Type a message" accesskey="m" minlength="24" required style="min-width: 100%;
+                  max-width: 100%;"></textarea>
+            <label for="msg-text">Message</label>
+          </fieldset>
+          <!-- <fieldset class="fieldset checkbox">
+            <input type="checkbox" id="msg-cc" />
+            <label for="msg-cc">Send me a copy of this message.</label>
+          </fieldset> 
+          <button type="reset">Reset</button> -->
+          <button type="submit" class=" home-button send jdshf " tabindex="1"
+            style="transition-duration: 0.3s; padding: 10px 0; ">Send message</button>
+          <div class="social-contact">
+            <a style="text-decoration: none;" href="#" class="fa fa-instagram fa-3x icon-s"></a>
+            <a style="text-decoration: none;  " href="#" class="fa fa-linkedin fa-3x icon-s"></a>
+            <a style="text-decoration: none;  " href="#" class="fa fa-whatsapp fa-3x icon-s"></a>
+            <style>
+              .icon-s:hover {
+                color: black;
+                transition-duration: 0.3s;
+              }
+
+              .icon-s {
+                color: #A44DD8;
+                transition-duration: 0.3s;
+              }
+
+              .social-contact {
+                column-gap: 10%;
+                display: flex;
+                flex-direction: row;
+              }
+            </style>
+          </div>
+          <!-- <div class="verify">
+                        <input type="number" id="msg-verify" placeholder="2+7=" max="99" />
+                        <label for="msg-verify">Verification question</label>
+                    </div> -->
+        </form>
+
+        <style>
+          /* Dark mode*/
+          body body[data-theme="dark"] {
+            color: #5c5c5c;
+            background-color: #111;
+          }
+
+          /* Form layout */
+          .form {
+            width: 90% !important;
+            max-width: 584px;
+            display: inline-block;
+          }
+
+          .form>legend svg {
+            fill: currentColor;
+            width: 1.2em;
+            height: 1.2em;
+            vertical-align: text-top;
+          }
+
+          /* Theme switch */
+          #theme {
+            position: fixed;
+            left: 50%;
+            top: 2em;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+          }
+
+          #theme label {
+            text-align: center;
+            padding: 0 0 3.5em 0;
+            text-indent: -1.5em
+          }
+        </style>
+        <script>
+          // Initialization
+          document.addEventListener('DOMContentLoaded', function (e) {
+            // Example for German i18n
+            var i18n = {};
+            messageArea('.message');
+          })
+        </script>
+
+        <script src="popup/contact.js"></script>
+      </body>
+    </div>
+  </div>
   <!-- <script src="app.js"></script> -->
 </body>
 
