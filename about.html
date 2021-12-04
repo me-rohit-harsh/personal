@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rohit || Interactive Frontend Developer</title>
+  <title>Rohit || Full Stack Developer</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="popup/contact.css">
   <link rel="stylesheet" href="popup/contact1.css">
@@ -552,19 +552,7 @@
     })(jQuery);
   </script>
 
-  <script>
-    let glowInTexts = document.querySelectorAll(".glowIn");
-    glowInTexts.forEach(glowInText => {
-      let letters = glowInText.textContent.split("");
-      glowInText.textContent = "";
-      letters.forEach((letter, i) => {
-        let span = document.createElement("span");
-        span.textContent = letter;
-        span.style.animationDelay = `${i * 0.02}s`;
-        glowInText.append(span);
-      });
-    });
-  </script>
+
   <!-- Contact pop up  -->
 
 
@@ -684,20 +672,11 @@
             text-indent: -1.5em
           }
         </style>
-        <script>
-          // Initialization
-          document.addEventListener('DOMContentLoaded', function (e) {
-            // Example for German i18n
-            var i18n = {};
-            messageArea('.message');
-          })
-        </script>
-
         <script src="popup/contact.js"></script>
       </body>
     </div>
   </div>
-  <!-- <script src="app.js"></script> -->
+
 </body>
 
 </html>
