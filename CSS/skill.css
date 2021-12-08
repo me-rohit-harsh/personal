@@ -1,0 +1,354 @@
+.article {
+    height: 100vh;
+}
+
+.skill-section {
+    font-size: 60px;
+    margin: 10% 0 0 10%;
+    color: #A44DD8;
+}
+
+h1,
+h3 {
+    font-weight: 500;
+}
+
+body {
+    background-color: #A683E3;
+}
+
+.gvhg {
+    padding: 6px;
+}
+
+.share-icons {
+    width: 80px;
+    position: relative;
+    display: flex;
+    box-shadow: inset 0 -6px 10px -8px rgba(0, 0, 0, 0.3), inset 0 6px 10px -8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 4;
+}
+
+.share-icons__block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    transform: translateZ(0);
+    transition: transform 0.3s, filter 0.2s;
+    transition-timing-function: ease-in-out;
+    z-index: 5;
+}
+
+
+.share-icons__block-left,
+.share-icons__block-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #A683E3;
+    transition: 0.6s;
+    z-index: 6;
+}
+
+.share-icons__block-left {
+    -webkit-clip-path: inset(0 50% 0 0);
+    clip-path: inset(0 50% 0 0);
+    z-index: 6;
+}
+
+.share-icons__block-right {
+    -webkit-clip-path: inset(0 0 0 50%);
+    clip-path: inset(0 0 0 50%);
+    z-index: 6;
+}
+
+.share-icons__item {
+    padding: 0px;
+    z-index: 4;
+}
+
+.share-icons:hover .share-icons__block {
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+    z-index: 3;
+}
+
+.share-icons:hover .share-icons__block-left {
+    transform: translateX(-50%) scale(1.2);
+    z-index: 3;
+}
+
+.share-icons:hover .share-icons__block-right {
+    transform: translateX(50%) scale(1.2);
+    z-index: 3;
+}
+
+@media (max-width:991px) {
+    .share-icons__block {
+        width: 110px;
+    }
+
+    .share-icons {
+        width: 110px;
+    }
+
+    .skill-section {
+        font-size: 50px;
+    }
+
+    .article {
+        height: 100%;
+    }
+}
+
+.gvhg {
+    padding: 6px;
+}
+
+.share-icons {
+    width: 80px;
+    position: relative;
+    display: flex;
+    box-shadow: inset 0 -6px 10px -8px rgba(0, 0, 0, 0.3), inset 0 6px 10px -8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 4;
+}
+
+.share-icons__block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    transform: translateZ(0);
+    transition: transform 0.3s, filter 0.2s;
+    transition-timing-function: ease-in-out;
+    z-index: 5;
+}
+
+
+.share-icons__block-left,
+.share-icons__block-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #A683E3;
+    transition: 0.6s;
+    z-index: 6;
+}
+
+.share-icons__block-left {
+    -webkit-clip-path: inset(0 50% 0 0);
+    clip-path: inset(0 50% 0 0);
+    z-index: 6;
+}
+
+.share-icons__block-right {
+    -webkit-clip-path: inset(0 0 0 50%);
+    clip-path: inset(0 0 0 50%);
+    z-index: 6;
+}
+
+.share-icons__item {
+    padding: 0px;
+    z-index: 4;
+}
+
+.share-icons:hover .share-icons__block {
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+    z-index: 3;
+}
+
+.share-icons:hover .share-icons__block-left {
+    transform: translateX(-50%) scale(1.2);
+    z-index: 3;
+}
+
+.share-icons:hover .share-icons__block-right {
+    transform: translateX(50%) scale(1.2);
+    z-index: 3;
+}
+
+@media (max-width:991px) {
+    .share-icons__block {
+        width: 110px;
+    }
+
+    .share-icons {
+        width: 110px;
+    }
+}
+
+@media (min-width:991px) {
+    .nav-last {
+        display: none;
+    }
+}
+
+@media (max-width:991px) {
+    .nav-first {
+        display: none;
+    }
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #e6e0f0;
+    background-image: -webkit-linear-gradient(20deg, #e6e0f0 30%, #A683E3 50%);
+}
+
+.container {
+    width: 80%;
+    margin-top: 15%;
+}
+
+@keyframes load {
+    from {
+        width: 0%
+    }
+}
+
+@-webkit-keyframes load {
+    from {
+        width: 0%
+    }
+}
+
+@-moz-keyframes load {
+    from {
+        width: 0%
+    }
+}
+
+@-o-keyframes load {
+    from {
+        width: 0%
+    }
+}
+
+.bar {
+    background-color: #EEE;
+    padding: 2px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.bar::before {
+    content: attr(data-skill);
+    background-color: #582768;
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+}
+
+.bar.front::before {
+    background-color: #ffcc33;
+}
+
+.bar.back::before {
+    background-color: #FF2253;
+}
+
+.bar.learning::before {
+    width: calc(95% - 10px);
+}
+
+.bar.basic::before {
+    width: calc(80% - 10px);
+}
+
+.bar.intermediate::before {
+    width: calc(70% - 10px);
+    background-color: #a6cfe3;
+}
+
+.bar.advanced::before {
+    width: calc(60% - 10px);
+    background-color: #D26CD5;
+}
+
+.bar.expert::before {
+    width: calc(85% - 10px);
+    background-color: #f3b0ff;
+}
+
+.block-left {
+    width: 50%;
+    /* height: 100vh; */
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.block-right {
+    width: 50%;
+    /* height: 100vh; */
+    float: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* MEDIA QUERIES FOR 545px <= Resolutions */
+
+@media (max-width:545px) {
+    .block-left {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+    }
+
+    .block-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        margin-top: 2%;
+    }
+}
+                            .icon-s:hover {
+                                color: black;
+                                transition-duration: 0.3s;
+                            }
+
+                            .icon-s {
+                                color: #A44DD8;
+                                transition-duration: 0.3s;
+                            }
+
+                            .social-contact {
+                                column-gap: 10%;
+                                display: flex;
+                                flex-direction: row;
+                            }
