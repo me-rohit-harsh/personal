@@ -1454,7 +1454,7 @@ var-download input:checked+label .button_spots:nth-of-type(60) {
 }
 
 .button_inner:hover i.l {
-  top: 12px;
+  top: 10px;
   opacity: 1;
   transition: left 0.3s 0s, top 0.3s 0.1s, opacity 0.3s 0.1s;
 }

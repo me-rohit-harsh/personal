@@ -79,12 +79,3 @@
     z-index: -1;
 } */
 
-::-moz-selection {
-    /* color: #fff; */
-    /* background: #ffb0ac; */
-}
-
-::selection {
-    /* color: #fff; */
-    /* background: #ffb0ac; */
-}

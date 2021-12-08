@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+
 var-service {
     padding: 0;
     margin: 0;
@@ -10,6 +11,7 @@ var-service {
     background: #F7E8F2;
     box-sizing: border-box;
 }
+
 .wrapper {
     padding: 60px auto;
 }
@@ -24,23 +26,28 @@ var-service {
     font-size: 4em;
     font-weight: 300;
 }
-.contact-title{
-        font-size: 4em;
+
+.contact-title {
+    font-size: 4em;
 }
 
 .page-title p {
     text-transform: uppercase;
     letter-spacing: 5px;
 }
+
 @media (max-width:315px) {
-    .page-title h1,.contact-title {
+
+    .page-title h1,
+    .contact-title {
         font-size: 3em;
     }
 
-.page-title p {
-    letter-spacing: 14px;
+    .page-title p {
+        letter-spacing: 14px;
+    }
 }
-}
+
 .card {
     /* width: 200px; */
     display: flex;
@@ -56,10 +63,12 @@ var-service {
     overflow: hidden;
     box-shadow: 5px 5px 15px rgba(96, 37, 102, 0.5);
     border-radius: 15px;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
 
 .card svg {
-    width:100%;
+    width: 100%;
     padding: 10px;
 }
 
@@ -69,25 +78,11 @@ var-service {
     font-size: 1.2em;
 }
 
-.card a {
-    font-family: "Lato", sans-serif;
-    text-transform: lowercase;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-    font-weight: 300;
-    padding: 12px 20px;
-    font-family: sans-serif;
-    font-size: 16px;
-    color: #DB6B86;
-    border: 1px solid #DB6B86;
-    text-decoration: none;
-    transition: all 0.4s ease-in-out;
-    background-color: #EFDFED;
-}
-
-.card a:hover {
-    background-color: #DB6B86;
-    color: #fff;
+.card:hover {
+    box-shadow: 5px 5px 15px 0 rgba(255, 255, 255, 0.30);
+    transform: translateY(-10px);
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
 
 .icon-wrap {
@@ -127,7 +122,7 @@ var-service {
 
 .icon-design .cursor-part {
     animation: bounceBFt2 2s ease-in-out infinite;
-} 
+}
 
 @keyframes move {
 

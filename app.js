@@ -82,17 +82,17 @@ elementsTL.forEach(element => {
 });
 
 
-const tl = gsap.timeline();
+// const tl = gsap.timeline();
 
-tl.from(".line-reveal", 0.9, {
-  x: 500,
-  ease: "power4.out",
-  delay: 0.5,
-  skewY: 0,
-  stagger: {
-    amount: 0.3
-  }
-})
+// tl.from(".line-reveal", 0.9, {
+//   x: 500,
+//   ease: "power4.out",
+//   delay: 10,
+//   skewY: 0,
+//   stagger: {
+//     amount: 0.3
+//   }
+// })
 
 let glowInTexts = document.querySelectorAll(".glowIn");
 glowInTexts.forEach(glowInText => {
@@ -101,7 +101,7 @@ glowInTexts.forEach(glowInText => {
   letters.forEach((letter, i) => {
     let span = document.createElement("span");
     span.textContent = letter;
-    span.style.animationDelay = `${i * 0.02}s`;
+    span.style.animationDelay = `${i * 0.07}s`;
     glowInText.append(span);
   });
 });

@@ -1504,17 +1504,18 @@
   h1 {
     color: #fff;
   }
-
-  #portfoilo h1::selection {
+  .container strong::selection,
+  .wrapper strong::selection,
+  .wrapper p::selection,
+  .contact-title::selection,
+  .whole h1::selection,
+  #portfoilo ::selection {
     background-color: #42345a;
     color: #fff;
   }
-
-  #portfoilo ::selection {
-    background-color: #ffb0ac;
-    color: #42345a;
-  }
-
+.material-icons::selection {
+  user-select: none;
+}
   /* Footer css  */
 
   footer {
