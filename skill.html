@@ -231,7 +231,12 @@ padding-left: 3%;padding-bottom: 3%;color: #A6A6A6;">Creative brand, website des
             <div class="close">+</div>
 
             <body data-theme="dark">
-                <form lang="en" spellcheck="false" class="form" name="google-sheet" method="post">
+                <!-- <form lang="en" spellcheck="false" class="form" name="google-sheet" method="post"> -->
+                <form action="https://api.web3forms.com/submit" method="POST" id="main-form" lang="en"
+                    spellcheck="false" class="form" name="google-sheet">
+                    <input type="hidden" name="access_key" value="49a7e9ae-a599-432a-ab55-2243b05686f8" />
+                    <input type="hidden" name="subject" value="New Submission from main contact form" />
+                    <input type="checkbox" name="botcheck" id="" style="display: none;" />
                     <legend class="legend">Leave a message</legend>
                     <fieldset class="fieldset">
                         <input type="text" id="msg-name" placeholder="Type your name" accesskey="n" minlength="2"
@@ -258,15 +263,67 @@ padding-left: 3%;padding-bottom: 3%;color: #A6A6A6;">Creative brand, website des
                         <label for="msg-text">Message</label>
                     </fieldset>
                     <button type="submit" class=" home-button send jdshf " tabindex="1"
-                        style="transition-duration: 0.3s; padding: 10px 0; ">Send message</button>
+                        style="transition-duration: 0.3s; padding: 10px 0; " id="form_result">Send message</button>
                     <div class="social-contact">
-                        <a style="text-decoration: none;" href="#" onclick='window.open("https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDQkNrDpjRFTkvTkbKdWwvKwkVcmrCNCXSdCHhhMnzjWNgMBvRMFSkvjMFhBtcfgCLpwhN");return false;' class="far fa-envelope fa-3x icon-s"></a>
-                        <a style="text-decoration: none;  " href="#" onclick='window.open("https://www.linkedin.com/in/merohitharsh");return false;' class="fa fa-linkedin fa-3x icon-s"></a>
-                        <a style="text-decoration: none;  " href="#" onclick='window.open("https://api.whatsapp.com/send?phone=917488794480&text=Hello%2C%20Mr.Rohit");return false;' class="fa fa-whatsapp fa-3x icon-s"></a>
+                        <a style="text-decoration: none;" href="#"
+                            onclick='window.open("https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDQkNrDpjRFTkvTkbKdWwvKwkVcmrCNCXSdCHhhMnzjWNgMBvRMFSkvjMFhBtcfgCLpwhN");return false;'
+                            class="far fa-envelope fa-3x icon-s"></a>
+                        <a style="text-decoration: none;  " href="#"
+                            onclick='window.open("https://www.linkedin.com/in/merohitharsh");return false;'
+                            class="fa fa-linkedin fa-3x icon-s"></a>
+                        <a style="text-decoration: none;  " href="#"
+                            onclick='window.open("https://api.whatsapp.com/send?phone=917488794480&text=Hello%2C%20Mr.Rohit");return false;'
+                            class="fa fa-whatsapp fa-3x icon-s"></a>
 
                     </div>
                 </form>
+
+                <!-- Script for form Submission in Gmail using API start   -->
                 <script>
+                    const forms = document.getElementById("main-form");
+                    const results = document.getElementById("form_result");
+                    forms.addEventListener("submit", function (e) {
+                        const formData = new FormData(forms);
+                        e.preventDefault();
+                        var object = {};
+                        formData.forEach((value, key) => {
+                            object[key] = value;
+                        });
+                        var json = JSON.stringify(object);
+                        results.innerHTML = "Please wait...";
+
+                        fetch("https://api.web3forms.com/submit", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                                Accept: "application/json"
+                            },
+                            body: json
+                        })
+                            .then(async (response) => {
+                                let json = await response.json();
+                                if (response.status == 200) {
+                                    results.innerHTML = json.message;
+                                } else {
+                                    console.log(response);
+                                    results.innerHTML = json.message;
+                                }
+                            })
+                            .catch((error) => {
+                                console.log(error);
+                                results.innerHTML = "Something went wrong!";
+                            })
+                            .then(function () {
+                                forms.reset();
+                                setTimeout(() => {
+                                    results.innerHTML = "Send Message Again"
+                                }, 5000);
+                            });
+                    });
+                </script>
+                <!-- Script for form Submission in Gmail using API end   -->
+                <!-- Script for form Submission in google sheet  -->
+                <!-- <script>
                     const scriptURL =
                         'https://script.google.com/macros/s/AKfycby55oZ_XkHpzKX08l7k2qRgFGuov5JOtXu4RYE0_Hly7KsouCMD_tz4Oou2WM_1ozH7/exec'
                     const form = document.forms['google-sheet']
@@ -274,13 +331,13 @@ padding-left: 3%;padding-bottom: 3%;color: #A6A6A6;">Creative brand, website des
                     form.addEventListener('submit', e => {
                         e.preventDefault()
                         fetch(scriptURL, {
-                                method: 'POST',
-                                body: new FormData(form)
-                            })
+                            method: 'POST',
+                            body: new FormData(form)
+                        })
                             .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
                             .catch(error => console.error('Error!', error.message))
                     })
-                </script>
+                </script> -->
                 <script src="popup/contact.js"></script>
             </body>
         </div>
